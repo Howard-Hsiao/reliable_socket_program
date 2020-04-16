@@ -36,7 +36,7 @@ Client 程式入口頁面如下:
 　　receiver在接收訊息後，首先先收取1 bytes的資料，據此判斷size field的長度，再收取該size field長度的資料，最後再解析size field的訊息後，收取該長度的資料即能確保資料已完整收取。
 
 ### 備註
-　　因為本次作業我實作了application layer protocol，因此能成功連接server的client，必須使用我自定義的yun_send和yun_recv，並且引入定義該二函式的yun_function.h於source code中。在此次作業我以實做了該類型的client，並將它放置於資料夾client下，該支程式僅能支援特定語法，執行程式即可看見使用說明的UI。
+　　本次作業我實作了application layer protocol，因此要成功連接server的client，就必須使用我自定義的yun_send和yun_recv。使用方法是在需要可靠傳輸的程式中，引入定義了這兩個函式的yun_function.h。
 
 ### 【參考資料】
 * 博碩出版的「北極星」團隊著作「特洛伊木馬病毒程式設計使用Python加強版」
